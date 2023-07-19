@@ -11,6 +11,10 @@
 #include <inttypes.h>
 #include <stdbool.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct{
 	bool in;
 	bool prevState;
@@ -35,5 +39,9 @@ bool frtrig(trig_t*);
 
 bool onChange8(onChange8_t*);
 bool onChange16(onChange16_t*);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* TRIGGERS_H_ */

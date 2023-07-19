@@ -11,6 +11,10 @@
 #include "stdbool.h"
 #include "triggers.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #define CLICK_TIME_MS 3
 #define PRESS_TIME_MS 1000
 #define DOUBLE_CLICK_TIME_MS 300
@@ -88,5 +92,9 @@ uint8_t countTimeDown(uint8_t* mins, uint8_t* secs, uint8_t* secsIndicator, uint
 void fbButton(FbButton_t* tim);
 void fbButtonDoubleClick(FbButtonDoubleClick_t* button);
 unsigned long mills();
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* SOFT_TIMER_H_ */
